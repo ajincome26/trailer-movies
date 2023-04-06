@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@layer base {
+  body {
+    @apply bg-slate-900 font-Inter px-5 text-white;
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply max-w-[1280px] mx-auto;
+  }
+  .movies-list .swiper-slide {
+    @apply w-[300px] h-auto;
+  }
+  .movies-similar .swiper-slide {
+    @apply w-[300px] h-auto;
+  }
+  .banner .swiper {
+    height: 100%;
+  }
+}
+
+// pagination
+.pagination {
+  .selected {
+    @apply text-white p-2 rounded-full bg-primary leading-none;
+  }
+}
+
+.truncate-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
